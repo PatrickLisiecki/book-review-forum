@@ -4,7 +4,7 @@ function Book({ book }) {
     const { image: { src, alt}, title, author } = book;
 
     return (
-        <div className="w-1/2 min-h-min mx-auto my-2.5 flex justify-center overflow-hidden bg-gray-200">
+        <div className="w-9/12 min-h-min mx-auto my-2.5 flex justify-center overflow-hidden bg-gray-200">
             <div className="h-full">
                 <img className="object-fill" src={src} alt={alt} />
             </div>
@@ -23,7 +23,7 @@ export default function BookList() {
     });
 
     return (
-        <div className="mx-auto min-h-screen flex-col justify-center items-center bg-red-400">
+        <div className="mx-auto w-9/12 pt-7 flex-col justify-center items-center border-r-2 border-l-2 border-gray-700">
             { allBooks }
         </div>
     );
