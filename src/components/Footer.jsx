@@ -5,15 +5,17 @@ export default function Footer() {
                 className="w-9/12 h-3/12 mx-auto flex justify-center items-center text-xl
                 p-2.5"
             >
-                <p className="text-gray-200">&copy; Copyright 2023 by &nbsp;</p>
-                <a
-                    href="https://github.com/PatrickLisiecki"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-300"
-                >
-                    Patrick Lisiecki
-                </a>
+                <p className="text-gray-200">
+                    &copy; Copyright 2023 by
+                    <a
+                        href="https://github.com/PatrickLisiecki"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-1 text-blue-300"
+                    >
+                        Patrick Lisiecki
+                    </a>
+                </p>
             </div>
         </footer>
     );
