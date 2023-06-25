@@ -7,7 +7,7 @@ function App() {
     return (
         <main className="w-full min-h-screen font-noto grid bg-gray-900">
             <Navbar />
-            <section className="pt-10">
+            <section className="pt-20">
                 <BookList />
             </section>
             <Footer />
