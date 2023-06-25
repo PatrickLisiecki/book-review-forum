@@ -1,7 +1,7 @@
 const books = [
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
@@ -9,7 +9,7 @@ const books = [
     },
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
@@ -17,7 +17,7 @@ const books = [
     },
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
@@ -25,7 +25,7 @@ const books = [
     },
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
@@ -33,7 +33,7 @@ const books = [
     },
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
@@ -41,7 +41,7 @@ const books = [
     },
     {
         image: {
-            src: "https://d3i5mgdwi2ze58.cloudfront.net/4hkku1sl8y3fh8ggaazav5o65uqp",
+            src: "src/images/book.png",
             alt: "The Great Gatsby",
         },
         title: "The Great Gatsby",
