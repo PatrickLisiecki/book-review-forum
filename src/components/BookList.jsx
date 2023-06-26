@@ -11,7 +11,7 @@ function Book({ book }) {
         <li className="w-11/12 mx-auto my-10 p-5 rounded-2xl bg-gray-400">
             <div className="flex justify-start overflow-hidden">
                 <div className="w-40">
-                    <img className="rounded-2xl" src={src} alt={alt} />
+                    <img className="w-full rounded-2xl" src={src} alt={alt} />
                 </div>
                 <div className="w-full p-5 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
                     <h2 className="text-2xl font-semibold">{title}</h2>
