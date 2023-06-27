@@ -13,10 +13,9 @@ export default function SearchBar() {
         // Filter books if search query includes title, author, or genre
         const filteredBooks = books.filter(
             (book) =>
-                book.title.toLowerCase().includes(searchQuery.toLowerCase())
-            // ||
-            // book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            // book.genre.toLowerCase().includes(searchQuery.toLowerCase())
+                book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            book.genre.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         // Update the search results
