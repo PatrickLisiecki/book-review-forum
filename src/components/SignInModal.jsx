@@ -59,7 +59,13 @@ export default function Modal({ isVisible, hideModal }) {
 
                         <div className="flex flex-row justify-center items-center mt-2 text-l">
                             <span>
-                                or <a href="#">create an account</a>
+                                New to Novel Opinions?
+                                <a
+                                    href="#"
+                                    className="ml-1 font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline"
+                                >
+                                    Sign Up
+                                </a>
                             </span>
                         </div>
                     </form>
