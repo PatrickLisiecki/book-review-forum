@@ -1,4 +1,5 @@
 import SearchBar from "./SearchBar";
+import NavButton from "./NavButton";
 
 export default function Navbar() {
     return (
@@ -7,7 +8,7 @@ export default function Navbar() {
                 <div className="w-9/12 flex justify-start items-center">
                     <div className="p-5">
                         <img
-                            className="w-20 h-20 text-white"
+                            className="w-20 h-20"
                             src="src/assets/images/logo.svg"
                             alt="Logo"
                         />
@@ -22,23 +23,17 @@ export default function Navbar() {
                     <SearchBar />
                 </div>
                 <div className="w-3/12 p-2">
-                    <div className="w-full h-full flex justify-evenly items-center">
-                        <button className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400">
-                            <img
-                                className="fill-current w-5 h-5"
-                                src="src/assets//images/register.svg"
-                                alt="Register Icon"
-                            />
-                            <span className="ml-2">Register</span>
-                        </button>
-                        <button className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400">
-                            <img
-                                className="fill-current w-5 h-5"
-                                src="src/assets/images/avatar.svg"
-                                alt="Log In Icon"
-                            />
-                            <span className="ml-2">Log In</span>
-                        </button>
+                    <div className="w-full h-full hidden lg:flex justify-evenly items-center">
+                        <NavButton
+                            iconSrc="src/assets/images/register.svg"
+                            iconAlt="Register"
+                            btnText={"Register"}
+                        />
+                        <NavButton
+                            iconSrc="src/assets/images/avatar.svg"
+                            iconAlt="Log In"
+                            btnText={"Log In"}
+                        />
                     </div>
                 </div>
             </div>
