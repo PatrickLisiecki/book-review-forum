@@ -8,7 +8,7 @@ export default function Navbar() {
                     <div className="p-5">
                         <img
                             className="w-20 h-20 text-white"
-                            src="src/images/logo.svg"
+                            src="src/assets/images/logo.svg"
                             alt="Logo"
                         />
                     </div>
@@ -26,7 +26,7 @@ export default function Navbar() {
                         <button className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400">
                             <img
                                 className="fill-current w-5 h-5"
-                                src="src/images/register.svg"
+                                src="src/assets//images/register.svg"
                                 alt="Register Icon"
                             />
                             <span className="ml-2">Register</span>
@@ -34,7 +34,7 @@ export default function Navbar() {
                         <button className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400">
                             <img
                                 className="fill-current w-5 h-5"
-                                src="src/images/avatar.svg"
+                                src="src/assets/images/avatar.svg"
                                 alt="Log In Icon"
                             />
                             <span className="ml-2">Log In</span>

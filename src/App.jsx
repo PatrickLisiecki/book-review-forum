@@ -1,7 +1,7 @@
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "./App.css";
+import "./assets/App.css";
 
 function App() {
     return (
