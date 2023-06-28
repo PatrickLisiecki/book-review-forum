@@ -31,12 +31,8 @@ export default function BookList({ books }) {
     });
 
     return (
-        <>
-            <div className="mx-auto w-9/12 pt-7 flex-col justify-center items-center border-r-2 border-l-2 border-gray-700">
-                <ul className="w-11/12 mx-auto my-10 rounded-2xl p-5 bg-gray-600">
-                    {allBooks}
-                </ul>
-            </div>
-        </>
+        <ul className="w-11/12 mx-auto my-10 rounded-2xl p-5 bg-gray-600">
+            {allBooks}
+        </ul>
     );
 }
