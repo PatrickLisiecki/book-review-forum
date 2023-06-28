@@ -6,6 +6,11 @@ export default {
         fontFamily: {
             noto: ['"Noto Sans JP"', "sans-serif"],
         },
+        // colors: {
+        //     transparent: "transparent",
+        //     current: "currentColor",
+        //     midnight: "#23272f",
+        // },
     },
     plugins: [],
 };
