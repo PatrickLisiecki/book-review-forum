@@ -1,4 +1,5 @@
-import books from "../books";
+// import { useState, useEffect } from "react";
+// import books from "../books";
 
 function Book({ book }) {
     const {
@@ -24,7 +25,7 @@ function Book({ book }) {
     );
 }
 
-export default function BookList() {
+export default function BookList({ books }) {
     const allBooks = books.map((currentBook, i) => {
         return <Book book={currentBook} key={i} />;
     });

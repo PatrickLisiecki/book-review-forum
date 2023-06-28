@@ -1,7 +1,6 @@
 import { useState } from "react";
-import books from "../books";
 
-export default function SearchBar() {
+export default function SearchBar({ books }) {
     // State for search bar
     const [searchQuery, setSearchQuery] = useState("");
 
