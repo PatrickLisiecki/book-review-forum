@@ -1,7 +1,12 @@
-export default function NavButton({ showModal, iconSrc, iconAlt, btnText }) {
+export default function NavButton({
+    showSignInModal,
+    iconSrc,
+    iconAlt,
+    btnText,
+}) {
     return (
         <button
-            onClick={showModal}
+            onClick={showSignInModal}
             className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400"
         >
             <img className="fill-current w-5 h-5" src={iconSrc} alt={iconAlt} />
