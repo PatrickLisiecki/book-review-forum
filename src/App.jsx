@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Modal from "./components/SignInModal";
+import SignInModal from "./components/SignInModal";
 import "./assets/App.css";
+// import AddBook from "./components/AddBook";
 
 function App() {
     const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
@@ -43,14 +44,17 @@ function App() {
     return (
         <main className="w-full min-h-screen font-noto grid bg-gray-900">
             <Navbar books={books} showSignInModal={showSignInModal} />
-            <section className="pt-20">
+
+            <section className="mx-auto w-9/12 pt-25 flex-col justify-center items-center border-r-2 border-l-2 border-gray-700">
                 <BookList books={books} />
             </section>
+
             <Footer />
-            <Modal
+
+            <SignInModal
                 isVisible={isSignInModalVisible}
                 hideSignInModal={hideSignInModal}
-            ></Modal>
+            />
         </main>
     );
 }
