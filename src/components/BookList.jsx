@@ -1,8 +1,6 @@
-import { useState } from "react";
 import books from "../books";
-import Modal from "./Modal";
 
-function Book({ book, showModal }) {
+function Book({ book }) {
     const {
         image: { src, alt },
         title,
@@ -16,16 +14,10 @@ function Book({ book, showModal }) {
                     <img className="w-full rounded-2xl" src={src} alt={alt} />
                 </div>
                 <div className="w-full h-6/12 p-5 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
-                    <h2 className="text-2xl font-semibold">{title}</h2>
+                    <a href="src/pages/testForum.html">
+                        <h2 className="text-2xl font-semibold">{title}</h2>
+                    </a>
                     <h3 className="text-xl">{author}</h3>
-                    <div className="inline-block mt-10 bg-gray-400">
-                        <button
-                            onClick={showModal}
-                            className="text-l px-4 py-2 bg-gray-200 border-2 border-black hover:bg-gray-400"
-                        >
-                            Add Review
-                        </button>
-                    </div>
                 </div>
             </div>
         </li>
@@ -33,24 +25,8 @@ function Book({ book, showModal }) {
 }
 
 export default function BookList() {
-    const [isModalVisible, setIsModalVisible] = useState(false);
-
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
-
-    const hideModal = () => {
-        setIsModalVisible(false);
-    };
-
     const allBooks = books.map((currentBook, i) => {
-        return (
-            <Book
-                book={currentBook}
-                showModal={showModal}
-                key={i}
-            />
-        );
+        return <Book book={currentBook} key={i} />;
     });
 
     return (
@@ -60,7 +36,6 @@ export default function BookList() {
                     {allBooks}
                 </ul>
             </div>
-            <Modal isVisible={isModalVisible} hideModal={hideModal}></Modal>
         </>
     );
 }
