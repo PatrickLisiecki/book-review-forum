@@ -13,14 +13,14 @@ export default function Modal({ isVisible, hideModal }) {
                 className="max-w-xl w-6/12 mx-auto flex flex-col"
             >
                 <div className="rounded-xl text-gray-800 p-8 bg-gray-300">
-                    <form className="selection:bg-blue-200 flex flex-col gap-2">
+                    <form className="flex flex-col gap-2">
                         <div className="flex flex-row justify-between items-center">
                             <h1 className="align-center text-2xl">
                                 Add Review
                             </h1>
-                            <button onClick={hideModal} className="">
+                            <button onClick={hideModal} className="text-gray-200">
                                 <img
-                                    src="src/images/x-icon.png"
+                                    src="src/assets/images/x-icon.png"
                                     className="h-10 w-10"
                                 />
                             </button>
@@ -48,7 +48,7 @@ export default function Modal({ isVisible, hideModal }) {
                         </fieldset>
 
                         <input
-                            className="bg-white hover:bg-gray-200 transition mt-4 px-4 py-2 border-2 border-gray-800 cursor-pointer "
+                            className="bg-white hover:bg-gray-200 transition mt-4 px-4 py-2 border-2 border-gray-800 cursor-pointer text-gray-800"
                             type="submit"
                         />
                     </form>
