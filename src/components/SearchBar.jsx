@@ -14,8 +14,8 @@ export default function SearchBar() {
         const filteredBooks = books.filter(
             (book) =>
                 book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            book.genre.toLowerCase().includes(searchQuery.toLowerCase())
+                book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                book.genre.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         // Update the search results
@@ -33,7 +33,7 @@ export default function SearchBar() {
 
     return (
         <div className="w-9/12 h-full flex items-center">
-            <form className="w-9/12 mx-auto">
+            <form className="w-11/12 mx-auto">
                 <label
                     htmlFor="search"
                     className="mb-2 text-sm font-medium text-gray-900 sr-only text-white"
@@ -69,7 +69,7 @@ export default function SearchBar() {
                     />
                     <button
                         type="submit"
-                        className="absolute right-2.5 bottom-2.5 focus:outline-none rounded-lg text-sm py-2 px-4 bg-gray-300 font-bold text-gray-800 hover:bg-gray-400"
+                        className="absolute right-2.5 bottom-2.5 focus:outline-none rounded-lg text-sm py-2 px-4 bg-gray-300 font-bold text-gray-800 hover:bg-gray-400 hidden lg:inline"
                     >
                         Search
                     </button>
