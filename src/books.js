@@ -1,5 +1,6 @@
 const books = [
     {
+        id: 1,
         image: {
             src: "https://i.weltbild.de/p/the-great-gatsby-310391702.jpg?v=1&wp=_ads-minzoom2",
             alt: "The Great Gatsby",
@@ -9,6 +10,7 @@ const books = [
         genre: "fiction",
     },
     {
+        id: 2,
         image: {
             src: "https://0.academia-photos.com/attachment_thumbnails/63753185/mini_magick20200626-26516-nmnvj5.png?1593237859",
             alt: "1984",
@@ -18,6 +20,7 @@ const books = [
         genre: "fiction",
     },
     {
+        id: 3,
         image: {
             src: "https://orion-uploads.openroadmedia.com/sm_9333ba5b72d2-hp.jpg",
             alt: "Harry Potter and the Sorcerer's Stone",
@@ -27,6 +30,7 @@ const books = [
         genre: "fiction",
     },
     {
+        id: 4,
         image: {
             src: "https://orion-uploads.openroadmedia.com/sm_f7e651-tolkien-lordoftherings.jpg",
             alt: "Lord of the Rings",
@@ -36,6 +40,7 @@ const books = [
         genre: "fiction",
     },
     {
+        id: 5,
         image: {
             src: "https://d3i5mgdwi2ze58.cloudfront.net/rqf95utsbarxtxjfzgnypxkce5a3",
             alt: "Lord of the Flies",
@@ -45,6 +50,7 @@ const books = [
         genre: "fiction",
     },
     {
+        id: 6,
         image: {
             src: "https://orion-uploads.openroadmedia.com/sm_2f32b6-catcher-in-the-rye-red.jpg",
             alt: "The Catcher in the Rye",
