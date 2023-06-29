@@ -51,25 +51,35 @@ function App() {
         setIsAddBookModalVisible(false);
     };
 
+    const onAddBook = (newBook) => {
+        // modal should close
+        hideAddBookModal();
+
+        // new job should be added to the DOM
+        setBooks((books) => {
+            return [...books, newBook];
+        });
+    };
+
     return (
         <main className="w-full min-h-screen font-noto grid bg-gray-900">
             <Navbar books={books} showSignInModal={showSignInModal} />
+
             <section className="mx-auto w-9/12 pt-32 flex-col justify-center items-center border-r-2 border-l-2 border-gray-700">
                 <AddBook showAddBookModal={showAddBookModal} />
                 <BookList books={books} />
             </section>
+
             <Footer />
+
             <Modal
                 isVisible={isAddBookModalVisible}
                 hideModal={hideAddBookModal}
             >
-                <AddBookForm />
+                <AddBookForm onAddBook={onAddBook} />
             </Modal>
 
-            <Modal 
-                isVisible={isSignInModalVisible} 
-                hideModal={hideSignInModal}
-            >
+            <Modal isVisible={isSignInModalVisible} hideModal={hideSignInModal}>
                 <SignInForm />
             </Modal>
         </main>

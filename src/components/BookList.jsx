@@ -2,11 +2,8 @@
 // import books from "../books";
 
 function Book({ book }) {
-    const {
-        image: { src, alt },
-        title,
-        author,
-    } = book;
+    const { forumBookTitle, forumBookAuthor, forumBookGenre, forumBookCover } =
+        book;
 
     return (
         <li className="w-full mx-auto p-5 border-t-2 border-b-2 border-gray-400 bg-none first:border-t-0 last:border-b-0">
@@ -14,8 +11,8 @@ function Book({ book }) {
                 <div className="w-32">
                     <img
                         className="object-cover w-full h-full rounded-2xl"
-                        src={src}
-                        alt={alt}
+                        src={forumBookCover}
+                        alt={forumBookTitle}
                     />
                 </div>
                 <div className="w-full p-5 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
@@ -23,9 +20,12 @@ function Book({ book }) {
                         href="src/pages/testForum.html"
                         className="hover:underline"
                     >
-                        <h2 className="text-2xl font-semibold">{title}</h2>
+                        <h2 className="text-2xl font-semibold">
+                            {forumBookTitle}
+                        </h2>
                     </a>
-                    <h3 className="text-xl">{author}</h3>
+                    <h3 className="text-xl">{forumBookAuthor}</h3>
+                    <h4 className="text-l capitalize">{forumBookGenre}</h4>
                     <button className="mt-14 rounded-lg text-l py-2 px-4 bg-gray-300 font-bold text-gray-800 hover:bg-gray-400 inline-flex items-center">
                         <img
                             className="w-5 h-5 mr-2"
