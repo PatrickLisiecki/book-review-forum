@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SignInModal from "./components/SignInModal";
+import Modal from "./components/Modal";
 import "./assets/App.css";
 import AddBook from "./components/AddBook";
-import AddBookModal from "./components/AddBookModal";
+import AddBookForm from "./components/AddBookForm";
+import SignInForm from "./components/SignInForm";
 
 function App() {
     const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
@@ -53,22 +54,24 @@ function App() {
     return (
         <main className="w-full min-h-screen font-noto grid bg-gray-900">
             <Navbar books={books} showSignInModal={showSignInModal} />
-
             <section className="mx-auto w-9/12 pt-32 flex-col justify-center items-center border-r-2 border-l-2 border-gray-700">
                 <AddBook showAddBookModal={showAddBookModal} />
                 <BookList books={books} />
             </section>
-
             <Footer />
-
-            <SignInModal
-                isVisible={isSignInModalVisible}
-                hideSignInModal={hideSignInModal}
-            />
-            <AddBookModal
+            <Modal
                 isVisible={isAddBookModalVisible}
-                hideSignInModal={hideAddBookModal}
-            />
+                hideModal={hideAddBookModal}
+            >
+                <AddBookForm />
+            </Modal>
+
+            <Modal 
+                isVisible={isSignInModalVisible} 
+                hideModal={hideSignInModal}
+            >
+                <SignInForm />
+            </Modal>
         </main>
     );
 }
