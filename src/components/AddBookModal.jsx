@@ -1,11 +1,11 @@
-export default function Modal({ isVisible, hideModal }) {
+export default function AddBookModal({ isVisible, hideAddBookModal }) {
     if (!isVisible) {
         return null;
     }
 
     return (
         <div
-            onClick={hideModal}
+            onClick={hideAddBookModal}
             className="fixed inset-0 flex justify-center items-center backdrop-blur-sm"
         >
             <div
@@ -16,10 +16,10 @@ export default function Modal({ isVisible, hideModal }) {
                     <form className="flex flex-col gap-2">
                         <div className="flex flex-row justify-between items-center">
                             <h1 className="align-center text-2xl">
-                                Welcome back!
+                                Create a New Forum
                             </h1>
                             <button
-                                onClick={hideModal}
+                                onClick={hideAddBookModal}
                                 className="text-gray-200"
                             >
                                 <img
@@ -30,44 +30,45 @@ export default function Modal({ isVisible, hideModal }) {
                         </div>
 
                         <fieldset className="flex flex-col gap-1 mt-2">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="forum-book-title">Book Title</label>
                             <input
                                 type="text"
-                                name="username"
-                                id="username"
-                                placeholder="Username"
+                                name="forum-book-title"
+                                id="forum-book-title"
+                                placeholder="Book Title"
                                 className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
                             />
                         </fieldset>
 
                         <fieldset className="flex flex-col gap-1 mt-3">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="forum-book-author">Author</label>
                             <input
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder="Password"
+                                type="text"
+                                name="forum-book-author"
+                                id="forum-book-author"
+                                placeholder="Author"
+                                className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
+                            />
+                        </fieldset>
+
+                        <fieldset className="flex flex-col gap-1 mt-3">
+                            <label htmlFor="forum-book-cover">
+                                Cover Image
+                            </label>
+                            <input
+                                type="text"
+                                name="forum-book-cover"
+                                id="forum-book-cover"
+                                placeholder="URL"
                                 className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
                             />
                         </fieldset>
 
                         <input
-                            className="bg-gray-800 transition mt-4 px-4 py-2 rounded-xl border-2 border-gray-800 cursor-pointer text-white hover:bg-gray-700 hover:border-gray-700"
                             type="submit"
-                            value="Log In"
+                            value="Create"
+                            className="bg-gray-800 mt-4 px-4 py-2 rounded-xl border-2 border-gray-800 cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
                         />
-
-                        <div className="flex flex-row justify-center items-center mt-2 text-l">
-                            <span>
-                                New to Novel Opinions?
-                                <a
-                                    href="#"
-                                    className="ml-1 font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline"
-                                >
-                                    Sign Up
-                                </a>
-                            </span>
-                        </div>
                     </form>
                 </div>
             </div>
