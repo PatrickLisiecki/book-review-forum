@@ -12,9 +12,13 @@ export default function SearchBar({ books }) {
         // Filter books if search query includes title, author, or genre
         const filteredBooks = books.filter(
             (book) =>
-                book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                book.genre.toLowerCase().includes(searchQuery.toLowerCase())
+                book.forumBookTitle
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase()) ||
+                book.forumBookAuthor
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase()) ||
+                book.forumBookGenre.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         // Update the search results
@@ -82,16 +86,16 @@ export default function SearchBar({ books }) {
                                     <div className="w-3/12 flex justify-center">
                                         <img
                                             className="max-w-full max-h-full"
-                                            src={book.image.src}
-                                            alt={book.image.alt}
+                                            src={book.forumBookCover}
+                                            alt={book.forumBookTitle}
                                         />
                                     </div>
                                     <div className="w-9/12 text-gray-900 flex-col content-start">
                                         <h2 className="text-l font-semibold">
-                                            {book.title}
+                                            {book.forumBookTitle}
                                         </h2>
                                         <h3 className="text-base">
-                                            by {book.author}
+                                            by {book.forumBookAuthor}
                                         </h3>
                                     </div>
                                 </div>
