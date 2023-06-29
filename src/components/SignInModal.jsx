@@ -1,11 +1,11 @@
-export default function Modal({ isVisible, hideModal }) {
+export default function SignInModal({ isVisible, hideSignInModal }) {
     if (!isVisible) {
         return null;
     }
 
     return (
         <div
-            onClick={hideModal}
+            onClick={hideSignInModal}
             className="fixed inset-0 flex justify-center items-center backdrop-blur-sm"
         >
             <div
@@ -19,7 +19,7 @@ export default function Modal({ isVisible, hideModal }) {
                                 Welcome back!
                             </h1>
                             <button
-                                onClick={hideModal}
+                                onClick={hideSignInModal}
                                 className="text-gray-200"
                             >
                                 <img
@@ -52,9 +52,9 @@ export default function Modal({ isVisible, hideModal }) {
                         </fieldset>
 
                         <input
-                            className="bg-gray-800 transition mt-4 px-4 py-2 rounded-xl border-2 border-gray-800 cursor-pointer text-white hover:bg-gray-700 hover:border-gray-700"
                             type="submit"
                             value="Log In"
+                            className="bg-gray-800 mt-4 px-4 py-2 rounded-xl border-2 border-gray-800 cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
                         />
 
                         <div className="flex flex-row justify-center items-center mt-2 text-l">
