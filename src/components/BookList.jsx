@@ -26,7 +26,9 @@ function Book({ book }) {
                             {forumBookTitle}
                         </h2>
                     </a>
-                    <h3 className="text-xl">{forumBookAuthor}</h3>
+                    <h3 className="text-xl" onClick={() => console.log("ID")}>
+                        {forumBookAuthor}
+                    </h3>
                     <h4 className="text-l capitalize">{forumBookGenre}</h4>
                     <button className="mt-14 rounded-lg text-l py-2 px-4 bg-gray-300 font-bold text-gray-800 hover:bg-gray-400 inline-flex items-center">
                         <img
@@ -51,15 +53,9 @@ function Book({ book }) {
 // }
 
 export default function BookList({ books }) {
-    const allBooks = books.filter((currentBook) => {
+    const allBooks = books.map((currentBook) => {
         // console.log(currentBook.id);
-        return (
-            <Book
-                book={currentBook}
-                key={currentBook.id}
-                onClick={() => console.log(key)}
-            />
-        );
+        return <Book book={currentBook} key={currentBook.id} />;
     });
 
     return (
