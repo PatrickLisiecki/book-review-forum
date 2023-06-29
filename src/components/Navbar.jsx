@@ -26,7 +26,8 @@ export default function Navbar({ books, showSignInModal }) {
                     <div className="w-full h-full hidden lg:flex justify-evenly items-center">
                         <NavButton
                             showSignInModal={showSignInModal}
-                            iconSrc="src/assets/images/avatar.svg"
+                            // iconSrc="src/assets/images/login.svg"
+                            iconSrc="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
                             iconAlt="Sign In"
                             btnText={"Sign In"}
                         />
