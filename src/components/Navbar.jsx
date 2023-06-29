@@ -4,7 +4,7 @@ import NavButton from "./NavButton";
 export default function Navbar({ books, showSignInModal }) {
     return (
         <div className="w-full fixed top-0 border-b-2 border-gray-700 bg-gray-900">
-            <div className="w-9/12 mx-auto border-r-2 border-l-2 border-gray-700 flex justify-between">
+            <div className="w-9/12 mx-auto flex justify-between">
                 <div className="w-full flex justify-start items-center">
                     <div className="p-5">
                         <img
