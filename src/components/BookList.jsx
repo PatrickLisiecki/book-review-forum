@@ -1,6 +1,8 @@
 // import { useState, useEffect } from "react";
 // import books from "../books";
 
+import { key } from "localforage";
+
 function Book({ book }) {
     const { forumBookTitle, forumBookAuthor, forumBookGenre, forumBookCover } =
         book;
@@ -8,7 +10,7 @@ function Book({ book }) {
     return (
         <li className="w-full mx-auto p-5 border-t-2 border-b-2 border-gray-400 bg-none first:border-t-0 last:border-b-0">
             <div className="flex justify-start overflow-hidden">
-                <div className="w-32">
+                <div className="w-40">
                     <img
                         className="object-cover w-full h-full rounded-2xl"
                         src={forumBookCover}
@@ -40,13 +42,28 @@ function Book({ book }) {
     );
 }
 
+// function matchesGenre(currentGenre, bookGenre) {
+//     if (currentGenre === bookGenre) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
 export default function BookList({ books }) {
-    const allBooks = books.map((currentBook, i) => {
-        return <Book book={currentBook} key={i} />;
+    const allBooks = books.filter((currentBook) => {
+        // console.log(currentBook.id);
+        return (
+            <Book
+                book={currentBook}
+                key={currentBook.id}
+                onClick={() => console.log(key)}
+            />
+        );
     });
 
     return (
-        <ul className="w-11/12 mx-auto my-10 rounded-2xl bg-gray-600">
+        <ul className="w-full mx-auto my-10 rounded-2xl bg-gray-600">
             {allBooks}
         </ul>
     );
