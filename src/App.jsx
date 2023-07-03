@@ -2,13 +2,13 @@ import "./assets/App.css";
 
 import { useEffect, useState } from "react";
 
-import AddBook from "./components/AddBook";
-import BookList from "./components/BookList";
-import CreateForumForm from "./components/CreateForumForm";
+import AddBook from "./pages/Forum/AddBook";
+import BookList from "./pages/Forum/BookList";
+import CreateForumForm from "./pages/Forum/CreateForumForm";
 import Footer from "./components/Footer";
-import Modal from "./components/Modal";
+import Modal from "./pages/Forum/Modal";
 import Navbar from "./components/Navbar";
-import SignInForm from "./components/SignInForm";
+import SignInForm from "./pages/Forum/SignInForm";
 
 function App() {
     const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
