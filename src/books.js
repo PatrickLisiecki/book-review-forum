@@ -55,6 +55,22 @@ const books = [
         forumBookCover:
             "https://cdn.britannica.com/21/182021-050-666DB6B1/book-cover-To-Kill-a-Mockingbird-many-1961.jpg",
     },
+    {
+        id: 87,
+        forumBookTitle: "The 48 Laws of Power",
+        forumBookAuthor: "Robert Greene ",
+        forumBookGenre: "Non-Fiction",
+        forumBookCover:
+            "https://m.media-amazon.com/images/I/61f+E8zer5L._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+        id: 99,
+        forumBookTitle: "Falling",
+        forumBookAuthor: "Newman",
+        forumBookGenre: "fiction",
+        forumBookCover:
+            "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQyLCrvJG0zlDZtcV5kgnGQ5GyRjeIx2R3htKld4LMMMfwKufueX_g3yWqGUjKOpDqyNuHydLgERPgUyPdkn9N22uBguu0O9CJri5-0vuo&usqp=CAE",
+    },
 ];
 
 export default books;
