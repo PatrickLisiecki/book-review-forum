@@ -1,8 +1,3 @@
-// import { useState, useEffect } from "react";
-// import books from "../books";
-
-import { key } from "localforage";
-
 function Book({ book }) {
     const { forumBookTitle, forumBookAuthor, forumBookGenre, forumBookCover } =
         book;
