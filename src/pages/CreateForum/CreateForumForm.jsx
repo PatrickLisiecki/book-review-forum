@@ -5,7 +5,7 @@ import { useState } from "react";
 export const action = async ({ request, params }) => {
     let forumData = Object.fromEntries(await request.formData());
 
-    forumData.forum_id = Math.floor(Math.random() * 100) + 1;
+    forumData.id = "2";
     forumData.thread_count = 0;
 
     console.log(forumData);

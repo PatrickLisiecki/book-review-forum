@@ -1,27 +1,40 @@
 {
-    "forum": [
-        {
-            "forum_id": 1,
-            "topic": "Fiction",
-            "description": "A forum for discussing fiction books.",
-            "thread_count": 1
-        }
-    ],
-    "thread": [
-        {
-            "thread_id": 1,
-            "thread_title": "1984",
-            "thread_content": "How do you guys feel about this book?",
-            "forum_id": 1
-        }
-    ],
-    "posts": [
-        {
-            "post_id": 1,
-            "post_title": "My Opinions",
-            "post_content": "Opinions about 1984 by George Orwell may vary, but it often elicits a sense of profound unease and foreboding. Many readers find themselves captivated by the dystopian world portrayed in the novel, experiencing a mix of fascination, discomfort, and reflection on the themes of surveillance, totalitarianism, and the erosion of personal freedom. Some may even describe their emotional response to 1984 as a blend of intrigue, alarm, and a haunting sense of relevance in today's society.",
-            "post_date": "Today",
-            "thread_id": 1
-        }
-    ]
+  "forum": [
+    {
+      "id": "1",
+      "topic": "Fiction",
+      "description": "A forum for discussing fiction books.",
+      "thread_count": 1
+    },
+    {
+      "topic": "Non-Fiction",
+      "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
+      "forum_id": "2",
+      "thread_count": 0,
+      "id": "Dz-ZuSw"
+    },
+    {
+      "topic": "Non-Fiction",
+      "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
+      "id": "2",
+      "thread_count": 0
+    }
+  ],
+  "thread": [
+    {
+      "thread_id": 1,
+      "thread_title": "1984",
+      "thread_content": "How do you guys feel about this book?",
+      "forum_id": 1
+    }
+  ],
+  "posts": [
+    {
+      "post_id": 1,
+      "post_title": "My Opinions",
+      "post_content": "Opinions about 1984 by George Orwell may vary, but it often elicits a sense of profound unease and foreboding. Many readers find themselves captivated by the dystopian world portrayed in the novel, experiencing a mix of fascination, discomfort, and reflection on the themes of surveillance, totalitarianism, and the erosion of personal freedom. Some may even describe their emotional response to 1984 as a blend of intrigue, alarm, and a haunting sense of relevance in today's society.",
+      "post_date": "Today",
+      "thread_id": 1
+    }
+  ]
 }
