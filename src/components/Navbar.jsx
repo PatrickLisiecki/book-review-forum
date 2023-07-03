@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
-import SearchBar from "../pages/Forum/SearchBar";
+import SearchBar from "../pages/Forums/SearchBar";
 
-export default function Navbar({ books, showSignInModal }) {
+export default function Navbar({ data, showSignInModal }) {
     return (
         <div className="w-full fixed top-0 border-b-2 border-gray-700 bg-gray-900">
             <div className="w-9/12 mx-auto flex justify-between">
@@ -24,7 +24,7 @@ export default function Navbar({ books, showSignInModal }) {
                     {/*
                         SEARCH BAR COMPONENT
                     */}
-                    <SearchBar books={books} />
+                    <SearchBar data={data} />
                 </div>
                 <div className="w-3/12 p-2">
                     <div className="w-full h-full hidden lg:flex justify-evenly items-center">
@@ -33,7 +33,7 @@ export default function Navbar({ books, showSignInModal }) {
                             // iconSrc="src/assets/images/login.svg"
                             iconSrc="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
                             iconAlt="Sign In"
-                            btnText={"Sign In"}
+                            btnText="Sign In"
                         />
                         {/* <NavButton
                             iconSrc="src/assets/images/avatar.svg"
