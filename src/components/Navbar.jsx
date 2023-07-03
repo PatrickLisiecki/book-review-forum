@@ -1,5 +1,6 @@
-import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
+import SearchBar from "../pages/Forum/SearchBar";
 
 export default function Navbar({ books, showSignInModal }) {
     return (
@@ -13,9 +14,12 @@ export default function Navbar({ books, showSignInModal }) {
                             alt="Logo"
                         />
                     </div>
-                    <span className="ml-2 text-3xl font-semibold text-gray-200">
+                    <Link
+                        to="/"
+                        className="ml-2 text-3xl font-semibold text-gray-200"
+                    >
                         Novel Opinions
-                    </span>
+                    </Link>
 
                     {/*
                         SEARCH BAR COMPONENT
