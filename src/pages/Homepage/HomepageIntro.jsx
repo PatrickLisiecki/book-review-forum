@@ -10,8 +10,7 @@ export default function HomepageIntro() {
                         Unveiling Literary Horizons,
                     </span>
                     <span className="font-bold text-6xl leading-tight mb-10">
-                        A Haven for Book Lovers and Thought-Provoking
-                        Discussions
+                        A Haven for Book Lovers
                     </span>
                     <p className="text-xl">
                         Discover the vibrant and inclusive book review forum,
@@ -27,7 +26,7 @@ export default function HomepageIntro() {
                                 </span>
                             </button>
                         </Link>
-                        <Link to="/forum">
+                        <Link to="/forums">
                             <button
                                 type="button"
                                 className="w-56 px-10 py-4 text-white text-xl font-medium bg-gradient-to-br from-green-400 to-blue-600 rounded-lg hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-200"

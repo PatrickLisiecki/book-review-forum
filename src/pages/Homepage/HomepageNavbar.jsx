@@ -35,7 +35,7 @@ export default function HomepageNavbar() {
                             </Link>
                         </li>
                         <li className="px-10">
-                            <Link to="/forum">
+                            <Link to="/forums">
                                 <button
                                     type="button"
                                     className="text-white bg-gray-800 text-base font-semibold rounded-full px-7 py-4 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
