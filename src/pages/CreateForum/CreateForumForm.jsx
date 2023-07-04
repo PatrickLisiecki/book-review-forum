@@ -1,11 +1,9 @@
-import { Form, redirect } from "react-router-dom";
-
-import { useState } from "react";
+import { Form, Link, redirect } from "react-router-dom";
 
 export const action = async ({ request, params }) => {
     let forumData = Object.fromEntries(await request.formData());
 
-    forumData.id = "2";
+    forumData.id = Math.floor(Math.random() * 100) + 1;
     forumData.thread_count = 0;
 
     console.log(forumData);
@@ -18,8 +16,6 @@ export const action = async ({ request, params }) => {
         body: JSON.stringify(forumData),
     });
 
-    debugger;
-
     if (!response.ok) {
         throw response;
     }
@@ -27,70 +23,61 @@ export const action = async ({ request, params }) => {
     return redirect("/forums");
 };
 
-// export const forumAction = async ({ request }) => {
-//     const formData = await request.formData();
-
-//     const submission = {
-//         forum_id: Math.floor(Math.random() * 100) + 1,
-//         topic: formData.get("topic"),
-//         description: formData.get("description"),
-//         thread_count: 0,
-//     };
-
-//     console.log(submission);
-
-//     const response = await fetch("http://localhost:3000/forum", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(submission),
-//     });
-
-//     if (!response.ok) {
-//         throw response;
-//     }
-
-//     return redirect("/forums");
-// };
-
 export default function CreateForumForm() {
     return (
-        <div className="w-6/12 mx-auto my-40 p-5 rounded-xl bg-gray-400">
+        <div className="w-6/12 mx-auto my-40 p-5 rounded-xl bg-gray-300">
             <Form method="POST" className="flex flex-col gap-2">
                 <div className="flex flex-row justify-between items-center">
-                    <h1 className="align-center text-2xl">
+                    <span className="font-semibold align-center text-3xl text-midnight">
                         Create a New Forum
-                    </h1>
+                    </span>
                 </div>
 
                 <fieldset className="flex flex-col gap-1 mt-2">
-                    <label htmlFor="topic">Topic</label>
+                    <label
+                        htmlFor="name"
+                        className="text-xl font-semibold text-midnight"
+                    >
+                        Name
+                    </label>
                     <input
                         type="text"
-                        name="topic"
-                        id="topic"
-                        placeholder="Topic"
-                        className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                        className="p-3 border-2 border-gray-400 bg-gray-700 text-white focus:outline-none"
                     />
                 </fieldset>
 
-                <fieldset className="flex flex-col gap-1 mt-3">
-                    <label htmlFor="description">Description</label>
-                    <input
-                        type="text"
-                        name="description"
+                <fieldset className="flex flex-col gap-1 mt-2 mb-2">
+                    <label
+                        htmlFor="description"
+                        className="text-xl font-semibold text-midnight"
+                    >
+                        Description
+                    </label>
+                    <textarea
                         id="description"
-                        placeholder="Description"
-                        className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
-                    />
+                        name="description"
+                        rows="4"
+                        className="w-full p-3 text-white border-2 border-gray-400 bg-gray-700 focus:outline-none "
+                        placeholder="What is this forum about?"
+                    ></textarea>
                 </fieldset>
 
-                <input
-                    type="submit"
-                    value="Create"
-                    className="bg-gray-800 mt-4 px-4 py-2 rounded-xl border-2 border-gray-800 cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
-                />
+                <fieldset className="flex flex-row justify-evenly">
+                    <Link
+                        to="/forums"
+                        className="w-1/3 bg-gray-700 px-7 py-3 rounded-xl cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
+                    >
+                        Go Back
+                    </Link>
+                    <input
+                        type="submit"
+                        value="Create Forum"
+                        className="w-1/3 bg-gray-700 px-7 py-3 rounded-xl cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
+                    />
+                </fieldset>
             </Form>
         </div>
     );
