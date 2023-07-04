@@ -25,7 +25,7 @@ export const action = async ({ request, params }) => {
 
 export default function CreateForumForm() {
     return (
-        <div className="w-6/12 mx-auto my-40 p-5 rounded-xl bg-gray-300">
+        <div className="w-6/12 mx-auto my-40 p-5 rounded-xl bg-zinc-300">
             <Form method="POST" className="flex flex-col gap-2">
                 <div className="flex flex-row justify-between items-center">
                     <span className="font-semibold align-center text-3xl text-midnight">
@@ -45,11 +45,11 @@ export default function CreateForumForm() {
                         name="name"
                         id="name"
                         placeholder="Name"
-                        className="p-3 border-2 border-gray-400 bg-gray-700 text-white focus:outline-none"
+                        className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
                     />
                 </fieldset>
 
-                <fieldset className="flex flex-col gap-1 mt-2 mb-2">
+                <fieldset className="flex flex-col gap-1 mt-2">
                     <label
                         htmlFor="description"
                         className="text-xl font-semibold text-midnight"
@@ -60,15 +60,15 @@ export default function CreateForumForm() {
                         id="description"
                         name="description"
                         rows="4"
-                        className="w-full p-3 text-white border-2 border-gray-400 bg-gray-700 focus:outline-none "
-                        placeholder="What is this forum about?"
+                        className="p-3 border-2 border-gray-400 bg-white focus:outline-none"
+                        placeholder="Describe your forum..."
                     ></textarea>
                 </fieldset>
 
-                <fieldset className="flex flex-row justify-evenly">
+                <fieldset className="flex flex-row justify-evenly mt-2">
                     <Link
                         to="/forums"
-                        className="w-1/3 bg-gray-700 px-7 py-3 rounded-xl cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
+                        className="w-1/3 bg-gray-700 px-7 py-3 text-center rounded-xl cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
                     >
                         Go Back
                     </Link>
