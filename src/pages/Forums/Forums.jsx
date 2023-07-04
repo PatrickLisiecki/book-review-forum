@@ -55,11 +55,12 @@ export default function Forums() {
     };
 
     return (
-        <main className="w-full min-h-screen font-noto grid bg-gray-900">
-            <Navbar data={forums} showSignInModal={showSignInModal} />
+        <main className="w-full min-h-screen">
+            {/* <Navbar data={forums} showSignInModal={showSignInModal} /> */}
+            <Navbar showSignInModal={showSignInModal} />
 
-            <section className="mx-auto w-9/12 pt-32 flex-col justify-center items-center">
-                <TopBar />
+            <section className="mx-auto w-9/12 flex-col justify-center items-center">
+                <TopBar data={forums} />
                 <ForumList forums={forums} />
             </section>
 

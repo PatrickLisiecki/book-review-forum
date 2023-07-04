@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
-export default function TopBar() {
+export default function TopBar({ data }) {
     return (
         <div className="w-full mx-auto my-10 flex flex-row justify-evenly rounded-2xl p-5 bg-gray-600">
             <Link
@@ -10,9 +11,10 @@ export default function TopBar() {
                 Create a Forum
             </Link>
             <div className="w-6/12 p-2 mx-auto flex justify-center items-center">
-                <label htmlFor="selectGenre" className="sr-only">
+                <SearchBar data={data} />
+                {/* <label htmlFor="selectGenre" className="sr-only">
                     Underline select
-                </label>
+                </label> */}
                 {/* <select
                     id="selectGenre"
                     className="w-full block py-3 text-l text-gray-200 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none focus:ring-0 peer"
