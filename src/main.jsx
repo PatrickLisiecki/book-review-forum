@@ -1,11 +1,14 @@
 import "./assets/index.css";
 
-import CreateForumForm, { action as createForumAction } from "./pages/CreateForum/CreateForumForm";
+import CreateForumForm, {
+    action as createForumAction,
+} from "./pages/CreateForum/CreateForumForm";
 import Forums, { loader as forumsLoader } from "./pages/Forums/Forums";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import ErrorPage from "./components/ErrorPage.jsx";
 import Homepage from "./pages/Homepage/Homepage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -15,6 +18,11 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Homepage />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/about",
+        element: <AboutPage />,
         errorElement: <ErrorPage />,
     },
     {
