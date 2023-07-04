@@ -23,29 +23,6 @@ export default function Forums() {
 
     const forums = useLoaderData();
 
-    // useEffect(() => {
-    //     let ignore = false;
-
-    //     async function fetchResults() {
-    //         const response = await fetch("http://localhost:3000/forum");
-    //         const forums = await response.json();
-
-    //         console.log(forums);
-
-    //         if (!ignore) {
-    //             setForums(forums);
-    //         }
-
-    //         return forums;
-    //     }
-
-    //     fetchResults();
-
-    //     return () => {
-    //         ignore = true;
-    //     };
-    // }, []);
-
     const showSignInModal = () => {
         setIsSignInModalVisible(true);
     };
@@ -56,7 +33,6 @@ export default function Forums() {
 
     return (
         <main className="w-full min-h-screen">
-            {/* <Navbar data={forums} showSignInModal={showSignInModal} /> */}
             <Navbar showSignInModal={showSignInModal} />
 
             <section className="mx-auto w-9/12 flex-col justify-center items-center">

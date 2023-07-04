@@ -12,7 +12,7 @@ export default function Modal({ isVisible, hideModal, children }) {
                 onClick={(e) => e.stopPropagation()}
                 className="max-w-xl w-6/12 mx-auto flex flex-col"
             >
-                <div className="rounded-xl text-gray-800 p-8 bg-gray-300">
+                <div className="rounded-xl text-midnight p-8 bg-zinc-300">
                     <div className="flex justify-end">
                         <button onClick={hideModal} className="inline-block">
                             <img
