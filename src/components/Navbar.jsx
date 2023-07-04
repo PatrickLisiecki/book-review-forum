@@ -1,46 +1,50 @@
 import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
-import SearchBar from "../pages/Forums/SearchBar";
 
-export default function Navbar({ data, showSignInModal }) {
+export default function Navbar({ showSignInModal }) {
     return (
-        <div className="w-full fixed top-0 border-b-2 border-gray-700 bg-gray-900">
-            <div className="w-9/12 mx-auto flex justify-between">
+        <div className="w-11/12 mx-auto border-b border-gray-300 top-0">
+            <div className="w-10/12 p-5 mx-auto flex justify-between">
                 <div className="w-full flex justify-start items-center">
-                    <div className="p-5">
+                    <div className="flex flex-row items-center gap-2">
                         <img
-                            className="w-20 h-20"
-                            src="src/assets/images/lightLogo.svg"
+                            className="w-12 h-12"
+                            src="src/assets/images/darkLogo.svg"
                             alt="Logo"
                         />
+                        <span className="uppercase text-3xl font-semibold tracking-wider text-midnight">
+                            Novel Opinions
+                        </span>
                     </div>
-                    <Link
-                        to="/"
-                        className="ml-2 text-3xl font-semibold text-gray-200"
-                    >
-                        Novel Opinions
-                    </Link>
-
-                    {/*
-                        SEARCH BAR COMPONENT
-                    */}
-                    <SearchBar data={data} />
                 </div>
-                <div className="w-3/12 p-2">
-                    <div className="w-full h-full hidden lg:flex justify-evenly items-center">
-                        <NavButton
-                            showSignInModal={showSignInModal}
-                            // iconSrc="src/assets/images/login.svg"
-                            iconSrc="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
-                            iconAlt="Sign In"
-                            btnText="Sign In"
-                        />
-                        {/* <NavButton
-                            iconSrc="src/assets/images/avatar.svg"
-                            iconAlt="Log In"
-                            btnText={"Log In"}
-                        /> */}
-                    </div>
+                <div className="w-full">
+                    <ul className="w-full flex flex-row justify-end items-center text-xl text-midnight">
+                        <li className="px-8 hover:text-sky-500">
+                            <Link to="/">
+                                <span>Home</span>
+                            </Link>
+                        </li>
+                        <li className="px-8 hover:text-sky-500">
+                            <Link to="/about">
+                                <span>About</span>
+                            </Link>
+                        </li>
+                        <li className="px-8 hover:text-sky-500">
+                            <Link to="/contact">
+                                <span>Contact</span>
+                            </Link>
+                        </li>
+                        <li className="px-8">
+                            <Link to="/forums">
+                                <NavButton
+                                    showSignInModal={showSignInModal}
+                                    iconSrc="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
+                                    iconAlt="Sign In"
+                                    btnText="Sign In"
+                                />
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

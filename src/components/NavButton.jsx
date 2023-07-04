@@ -7,7 +7,7 @@ export default function NavButton({
     return (
         <button
             onClick={showSignInModal}
-            className="inline-flex items-center py-2 px-4 bg-gray-300 font-bold text-gray-800 rounded hover:bg-gray-400"
+            className="inline-flex items-center px-6 py-3 border border-gray-700 hover:border-sky-500 hover:text-sky-500 hover:-translate-y-[2px] focus:outline-none"
         >
             <img className="fill-current w-5 h-5" src={iconSrc} alt={iconAlt} />
             <span className="ml-2">{btnText}</span>
