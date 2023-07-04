@@ -2,21 +2,32 @@
   "forum": [
     {
       "id": "1",
-      "topic": "Fiction",
+      "name": "Fiction",
       "description": "A forum for discussing fiction books.",
       "thread_count": 1
     },
     {
-      "topic": "Non-Fiction",
+      "name": "Non-Fiction",
       "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
-      "forum_id": "2",
-      "thread_count": 0,
-      "id": "Dz-ZuSw"
+      "id": 29,
+      "thread_count": 0
     },
     {
-      "topic": "Non-Fiction",
-      "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
-      "id": "2",
+      "name": "",
+      "description": "",
+      "id": 44,
+      "thread_count": 0
+    },
+    {
+      "name": "Favorite Books",
+      "description": "Post about your favorite books!",
+      "id": 70,
+      "thread_count": 0
+    },
+    {
+      "name": "Harry Potter",
+      "description": "My favorite Harry Potter book is The Sorcerer's Stone, what is yours?",
+      "id": 5,
       "thread_count": 0
     }
   ],
