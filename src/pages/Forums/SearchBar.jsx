@@ -11,7 +11,7 @@ export default function SearchBar({ data }) {
     const getSearchResults = () => {
         // Filter books if search query includes title, author, or genre
         const results = data.filter((forum) =>
-            forum.topic.toLowerCase().includes(searchQuery.toLowerCase())
+            forum.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         // Update the search results
@@ -78,13 +78,13 @@ export default function SearchBar({ data }) {
                                 >
                                     <div className="w-3/12 flex justify-center">
                                         <img
-                                            src="src/assets/images/logo.svg"
+                                            src="src/assets/images/lightlightLogo.svg"
                                             alt="Placeholder"
                                         />
                                     </div>
                                     <div className="w-9/12 text-gray-900 flex-col content-start">
                                         <h2 className="text-l font-semibold">
-                                            {result.topic}
+                                            {result.name}
                                         </h2>
                                         <h3 className="text-base">
                                             Threads: {result.thread_count}

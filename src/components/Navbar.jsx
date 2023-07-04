@@ -10,7 +10,7 @@ export default function Navbar({ data, showSignInModal }) {
                     <div className="p-5">
                         <img
                             className="w-20 h-20"
-                            src="src/assets/images/logo.svg"
+                            src="src/assets/images/lightLogo.svg"
                             alt="Logo"
                         />
                     </div>
