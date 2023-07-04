@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SearchBar({ data }) {
     // State for search bar
@@ -7,90 +8,94 @@ export default function SearchBar({ data }) {
     // State for search query results
     const [searchResults, setSearchResults] = useState([]);
 
-    // Function for retrieving the books that match the search result
     const getSearchResults = () => {
-        // Filter books if search query includes title, author, or genre
+        // Filter if search query includes
         const results = data.filter((forum) =>
             forum.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
-        // Update the search results
         setSearchResults(results);
     };
 
     // Function for handling the search query state
     const handleSearchQuery = (e) => {
-        // Update the value inside of the input
         setSearchQuery(e.target.value);
 
-        // Retrieve any books matching the search query
         getSearchResults();
     };
 
     return (
-        <div className="w-9/12 h-full flex items-center">
+        <div className="w-full h-full flex items-center">
             <form className="w-11/12 mx-auto">
                 <label
                     htmlFor="search"
-                    className="mb-2 text-sm font-medium text-gray-900 sr-only text-white"
+                    className="mb-2 text-sm text-midnight sr-only"
                 >
                     Search
                 </label>
                 <div className="relative">
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg
-                            aria-hidden="true"
-                            className="w-5 h-5 text-gray-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                            ></path>
-                        </svg>
+                    <div className="w-full bg-white rounded flex items-center p-4 shadow-sm border border-gray-200">
+                        <button className="outline-none focus:outline-none">
+                            <svg
+                                aria-hidden="true"
+                                className="w-5 h-5 text-gray-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                ></path>
+                            </svg>
+                        </button>
+                        <input
+                            type="search"
+                            id="search"
+                            name="search"
+                            placeholder="Search..."
+                            className="w-full pl-4 text-m outline-none focus:outline-none bg-transparent"
+                            required
+                            value={searchQuery}
+                            onChange={handleSearchQuery}
+                        />
+                        <div className="select">
+                            <select
+                                name="filter"
+                                id="filter"
+                                className="text-s outline-none focus:outline-none bg-transparent"
+                            >
+                                <option value="all">All</option>
+                                <option value="name">Name</option>
+                                <option value="genre">Genre</option>
+                            </select>
+                        </div>
                     </div>
-                    <input
-                        type="search"
-                        id="search"
-                        className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 outline-none bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
-                        placeholder="Search..."
-                        required
-                        value={searchQuery}
-                        onChange={handleSearchQuery}
-                    />
-                    <button
-                        type="submit"
-                        className="absolute right-2.5 bottom-2.5 focus:outline-none rounded-lg text-sm py-2 px-4 bg-gray-300 font-bold text-gray-800 hover:bg-gray-400 hidden lg:inline"
-                    >
-                        Search
-                    </button>
                     {searchQuery && searchResults.length > 0 && (
-                        <div className="w-full max-h-screen mt-2 flex-col absolute z-50 px-5 overflow-auto text-white border border-gray-600 rounded-lg bg-gray-700">
+                        <div className="w-full max-h-screen mt-2 flex flex-col gap-4 absolute z-50 p-5 overflow-auto text-midnight border border-zinc-600 rounded bg-zinc-400">
                             {searchResults.map((result, i) => (
-                                <div
-                                    key={i}
-                                    className="w-full max-h-20 flex justify-start overflow-hidden p-2 my-4 bg-gray-200"
-                                >
-                                    <div className="w-3/12 flex justify-center">
-                                        <img
-                                            src="src/assets/images/lightlightLogo.svg"
-                                            alt="Placeholder"
-                                        />
+                                <Link to="/" key={i}>
+                                    <div className="w-full max-h-20 flex flex-row justify-evenly overflow-hidden p-2 rounded-lg bg-zinc-200">
+                                        <div className="flex justify-center">
+                                            <img
+                                                src="src/assets/images/darkLogo.svg"
+                                                alt="Forum Placeholder Image"
+                                                className="w-12 h-12"
+                                            />
+                                        </div>
+                                        <div className="w-9/12 text-midnight flex-col content-start">
+                                            <span className="block text-l font-semibold">
+                                                {result.name}
+                                            </span>
+                                            <span className="text-base">
+                                                Threads: {result.thread_count}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className="w-9/12 text-gray-900 flex-col content-start">
-                                        <h2 className="text-l font-semibold">
-                                            {result.name}
-                                        </h2>
-                                        <h3 className="text-base">
-                                            Threads: {result.thread_count}
-                                        </h3>
-                                    </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )}
