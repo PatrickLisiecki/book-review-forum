@@ -4,22 +4,23 @@ function Forum({ forum }) {
     const { name, description, thread_count } = forum;
 
     return (
-        <li className="w-full mx-auto p-5 border-t-2 border-b-2 border-gray-400 bg-none first:border-t-0 last:border-b-0">
-            <div className="flex justify-start overflow-hidden">
-                <div className="w-40">
+        <li className="w-11/12 mx-auto border-t border-b border-gray-400 bg-none first:border-t-0 last:border-b-0">
+            <div className="h-[105px] flex justify-start overflow-hidden">
+                <div className="w-auto p-3 flex justify-center items-center">
                     <img
-                        src="src/assets/images/lightLogo.svg"
+                        src="src/assets/images/darkLogo.svg"
                         alt="Forum Image"
+                        className="w-16 h-16"
                     />
                 </div>
-                <div className="w-full p-5 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
+                <div className="w-full p-3 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
                     <Link to="/forums/:forumId" className="hover:underline">
-                        <span className="block text-2xl font-semibold">
+                        <span className="block text-xl font-semibold">
                             {name}
                         </span>
                     </Link>
-                    <span className="block text-xl">{description}</span>
-                    <span className=" block text-l capitalize">
+                    <span className="block text-lg">{description}</span>
+                    <span className=" block text-m capitalize">
                         Threads: {thread_count}
                     </span>
                 </div>
@@ -31,11 +32,11 @@ function Forum({ forum }) {
 export default function ForumList({ forums }) {
     const allForums = forums.map((currentForum) => {
         console.log(currentForum.forum_id);
-        return <Forum forum={currentForum} key={currentForum.forum_id} />;
+        return <Forum forum={currentForum} key={currentForum.id} />;
     });
 
     return (
-        <ul className="w-full mx-auto my-10 rounded-2xl bg-gray-600">
+        <ul className="w-full mx-auto my-10 rounded-2xl bg-zinc-200">
             {allForums}
         </ul>
     );
