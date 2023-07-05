@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function SearchBar({ data }) {
     // State for search bar
@@ -77,13 +78,12 @@ export default function SearchBar({ data }) {
                     {searchQuery && searchResults.length > 0 && (
                         <div className="w-full max-h-screen mt-2 flex flex-col gap-4 absolute z-50 p-5 overflow-auto text-midnight border border-zinc-600 rounded bg-zinc-400">
                             {searchResults.map((result, i) => (
-                                <Link to="/" key={i}>
+                                <Link to={`/forums/${result.id}`} key={i}>
                                     <div className="w-full max-h-20 flex flex-row justify-evenly overflow-hidden p-2 rounded-lg bg-zinc-200">
                                         <div className="flex justify-center">
-                                            <img
-                                                src="src/assets/images/darkLogo.svg"
-                                                alt="Forum Placeholder Image"
-                                                className="w-12 h-12"
+                                            <FontAwesomeIcon
+                                                icon="fa-solid fa-link"
+                                                className="w-12 h-12 text-midnight cursor-pointer hover:text-sky-500"
                                             />
                                         </div>
                                         <div className="w-9/12 text-midnight flex-col content-start">

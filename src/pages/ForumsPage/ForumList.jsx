@@ -1,17 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 function ForumLink({ forum }) {
     const { id, name, description, thread_count } = forum;
 
     return (
-        <li className="w-11/12 mx-auto border-t border-b border-gray-400 bg-none first:border-t-0 last:border-b-0">
+        <li className="w-11/12 mx-auto flex flex-row justify-between border-t border-b border-gray-400 bg-none first:border-t-0 last:border-b-0">
             <div className="h-[105px] flex justify-start overflow-hidden">
                 <div className="w-auto p-3 flex justify-center items-center">
-                    <img
-                        src="src/assets/images/darkLogo.svg"
-                        alt="Forum Image"
-                        className="w-16 h-16"
-                    />
+                    <Link to={`/forums/${id}`}>
+                        <FontAwesomeIcon
+                            icon="fa-comments"
+                            className="w-16 h-16 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                        />
+                    </Link>
                 </div>
                 <div className="w-full p-3 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
                     <Link to={`/forums/${id}`} className="hover:underline">

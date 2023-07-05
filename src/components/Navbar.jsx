@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
 
@@ -7,11 +8,12 @@ export default function Navbar({ showSignInModal }) {
             <div className="w-10/12 p-5 mx-auto flex justify-between">
                 <div className="w-full flex justify-start items-center">
                     <div className="flex flex-row items-center gap-2">
-                        <img
-                            src="/src/assets/images/darkLogo.svg"
-                            alt="Logo"
-                            className="w-12 h-12"
-                        />
+                        <Link to="/">
+                            <FontAwesomeIcon
+                                icon="fa-bookmark"
+                                className="w-10 h-10 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                            />
+                        </Link>
                         <span className="uppercase text-3xl font-semibold tracking-wider text-midnight">
                             Novel Opinions
                         </span>
