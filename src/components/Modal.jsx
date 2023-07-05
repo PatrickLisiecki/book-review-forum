@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
+
 export default function Modal({ isVisible, hideModal, children }) {
     if (!isVisible) {
         return null;
@@ -15,9 +18,9 @@ export default function Modal({ isVisible, hideModal, children }) {
                 <div className="rounded-xl text-midnight p-8 bg-zinc-300">
                     <div className="flex justify-end">
                         <button onClick={hideModal} className="inline-block">
-                            <img
-                                src="src/assets/images/x-icon.png"
-                                className="h-10 w-10"
+                            <FontAwesomeIcon
+                                icon={faSquareXmark}
+                                className="w-10 h-10 hover:text-sky-400"
                             />
                         </button>
                     </div>

@@ -8,7 +8,7 @@ export default function Navbar({ showSignInModal }) {
                 <div className="w-full flex justify-start items-center">
                     <div className="flex flex-row items-center gap-2">
                         <img
-                            src="src/assets/images/darkLogo.svg"
+                            src="/src/assets/images/darkLogo.svg"
                             alt="Logo"
                             className="w-12 h-12"
                         />
@@ -38,8 +38,6 @@ export default function Navbar({ showSignInModal }) {
                             <Link to="/forums">
                                 <NavButton
                                     showSignInModal={showSignInModal}
-                                    iconSrc="https://img.icons8.com/ios-filled/50/login-rounded-right.png"
-                                    iconAlt="Sign In"
                                     btnText="Sign In"
                                 />
                             </Link>
