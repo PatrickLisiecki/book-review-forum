@@ -7,7 +7,7 @@ export default function HistoryBar({ forum }) {
     return (
         <div className="w-full mx-auto my-10 flex flex-row justify-start gap-6 items-center rounded-2xl p-5 bg-zinc-200">
             <Link to={`/forums/${id}/new`}>
-                <button className="flex justify-center items-center p-3.5 border border-gray-700 hover:border-sky-400 hover:text-sky-400 focus:outline-none">
+                <button className="flex justify-center items-center p-3.5 border-2 border-gray-700 text-lg font-medium hover:border-sky-400 hover:text-sky-400 focus:outline-none">
                     Create a Thread
                 </button>
             </Link>

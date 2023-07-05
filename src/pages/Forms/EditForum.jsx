@@ -7,7 +7,7 @@ export async function loader({ params }) {
 
     const forum = await response.json();
 
-    console.log(forum);
+    // console.log(forum);
 
     return forum;
 }
@@ -37,7 +37,7 @@ export async function action({ request, params }) {
 export default function EditForum() {
     const forum = useLoaderData();
 
-    console.log(forum);
+    // console.log(forum);
 
     const { id, name, description } = forum;
 
