@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import HomepageNavbar from "../Homepage/HomepageNavbar";
 import Footer from "../../components/Footer";
+import HomepageNavbar from "../Homepage/HomepageNavbar";
+import React from "react";
 
 export default function AboutPage() {
     return (

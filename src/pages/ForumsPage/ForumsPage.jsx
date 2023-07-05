@@ -2,9 +2,9 @@ import "../../assets/App.css";
 
 import Footer from "../../components/Footer";
 import ForumList from "./ForumList";
-import Modal from "./Modal";
+import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
-import SignInForm from "./SignInForm";
+import SignInForm from "../../components/SignInForm";
 import TopBar from "./TopBar";
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
@@ -18,9 +18,9 @@ export async function loader({ params }) {
 }
 
 export default function ForumsPage() {
-    const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
-
     const forums = useLoaderData();
+
+    const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
 
     const showSignInModal = () => {
         setIsSignInModalVisible(true);
@@ -31,10 +31,10 @@ export default function ForumsPage() {
     };
 
     return (
-        <main className="w-full min-h-screen">
+        <main className="w-full min-h-screen flex flex-col justify-between">
             <Navbar showSignInModal={showSignInModal} />
 
-            <section className="mx-auto w-9/12 flex-col justify-center items-center">
+            <section className="w-9/12 mx-auto flex-grow flex-col justify-center items-center">
                 <TopBar data={forums} />
                 <ForumList forums={forums} />
             </section>

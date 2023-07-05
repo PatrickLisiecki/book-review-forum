@@ -8,9 +8,9 @@ export default function Navbar({ showSignInModal }) {
                 <div className="w-full flex justify-start items-center">
                     <div className="flex flex-row items-center gap-2">
                         <img
-                            className="w-12 h-12"
                             src="src/assets/images/darkLogo.svg"
                             alt="Logo"
+                            className="w-12 h-12"
                         />
                         <span className="uppercase text-3xl font-semibold tracking-wider text-midnight">
                             Novel Opinions
