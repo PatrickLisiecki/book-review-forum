@@ -11,7 +11,7 @@ export default function HomepageNavbar() {
                         <Link to="/">
                             <FontAwesomeIcon
                                 icon="fa-bookmark"
-                                className="w-10 h-10 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                                className="w-10 h-10 text-midnight cursor-pointer hover:text-sky-400 hover:-translate-y-[2px]"
                             />
                         </Link>
                         <span className="uppercase text-3xl font-semibold tracking-wider text-midnight">
@@ -21,17 +21,17 @@ export default function HomepageNavbar() {
                 </div>
                 <div className="w-full">
                     <ul className="w-full flex flex-row justify-end items-center text-xl text-midnight">
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/">
                                 <span>Home</span>
                             </Link>
                         </li>
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/about">
                                 <span>About</span>
                             </Link>
                         </li>
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/contact">
                                 <span>Contact</span>
                             </Link>
@@ -40,7 +40,7 @@ export default function HomepageNavbar() {
                             <Link to="/forums">
                                 <button
                                     type="button"
-                                    className="min-w-[140px] flex justify-center items-center p-3 border border-gray-700 hover:border-sky-500 hover:text-sky-500 hover:-translate-y-[2px] focus:outline-none"
+                                    className="min-w-[140px] flex justify-center items-center p-3 border border-gray-700 hover:border-sky-400 hover:text-sky-400 hover:-translate-y-[2px] focus:outline-none"
                                 >
                                     Go to Forum
                                 </button>

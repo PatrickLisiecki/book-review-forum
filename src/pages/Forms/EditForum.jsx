@@ -86,7 +86,7 @@ export default function EditForum() {
 
                 <fieldset className="flex flex-row justify-evenly mt-2">
                     <Link
-                        to={`forums/${id}`}
+                        to={`/forums/${id}`}
                         className="w-1/3 bg-gray-700 px-7 py-3 text-center rounded-xl cursor-pointer text-white hover:bg-gray-600 hover:border-gray-600"
                     >
                         Go Back

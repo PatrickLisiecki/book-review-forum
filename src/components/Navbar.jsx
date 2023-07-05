@@ -11,7 +11,7 @@ export default function Navbar({ showSignInModal }) {
                         <Link to="/">
                             <FontAwesomeIcon
                                 icon="fa-bookmark"
-                                className="w-10 h-10 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                                className="w-10 h-10 text-midnight cursor-pointer hover:text-sky-400 hover:-translate-y-[2px]"
                             />
                         </Link>
                         <span className="uppercase text-3xl font-semibold tracking-wider text-midnight">
@@ -21,17 +21,17 @@ export default function Navbar({ showSignInModal }) {
                 </div>
                 <div className="w-full">
                     <ul className="w-full flex flex-row justify-end items-center text-xl text-midnight">
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/">
                                 <span>Home</span>
                             </Link>
                         </li>
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/about">
                                 <span>About</span>
                             </Link>
                         </li>
-                        <li className="px-8 hover:text-sky-500">
+                        <li className="px-8 hover:text-sky-400">
                             <Link to="/contact">
                                 <span>Contact</span>
                             </Link>

@@ -11,11 +11,11 @@ function ForumLink({ forum }) {
                     <Link to={`/forums/${id}`}>
                         <FontAwesomeIcon
                             icon="fa-comments"
-                            className="w-16 h-16 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                            className="w-16 h-16 text-midnight cursor-pointer hover:text-sky-400 hover:-translate-y-[2px]"
                         />
                     </Link>
                 </div>
-                <div className="w-full p-3 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
+                <div className="w-full p-3 ml-3 text-midnight flex-col content-start rounded-2xl bg-gray-200">
                     <Link to={`/forums/${id}`} className="hover:underline">
                         <span className="block text-xl font-semibold">
                             {name}

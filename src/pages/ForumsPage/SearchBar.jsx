@@ -83,7 +83,7 @@ export default function SearchBar({ data }) {
                                         <div className="flex justify-center">
                                             <FontAwesomeIcon
                                                 icon="fa-solid fa-link"
-                                                className="w-12 h-12 text-midnight cursor-pointer hover:text-sky-500"
+                                                className="w-12 h-12 text-midnight cursor-pointer hover:text-sky-400"
                                             />
                                         </div>
                                         <div className="w-9/12 text-midnight flex-col content-start">

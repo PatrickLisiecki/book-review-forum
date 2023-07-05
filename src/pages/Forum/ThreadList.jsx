@@ -21,11 +21,11 @@ function ThreadLink({ thread }) {
                     <Link to="/forums">
                         <FontAwesomeIcon
                             icon="fa-solid fa-link"
-                            className="w-12 h-12 text-midnight cursor-pointer hover:text-sky-500 hover:-translate-y-[2px]"
+                            className="w-12 h-12 text-midnight cursor-pointer hover:text-sky-400 hover:-translate-y-[2px]"
                         />
                     </Link>
                 </div>
-                <div className="w-full p-3 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
+                <div className="w-full p-3 ml-3 text-midnight flex-col content-start rounded-2xl bg-gray-200">
                     {/* <span className="block text-xl font-semibold">{id}</span> */}
                     <p className="block p-3 text-lg">{thread_topic}</p>
                 </div>
