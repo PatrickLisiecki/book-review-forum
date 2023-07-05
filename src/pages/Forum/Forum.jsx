@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
 import Footer from "../../components/Footer";
+import HistoryBar from "./HistoryBar";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import SignInForm from "../../components/SignInForm";
 import ThreadList from "./ThreadList";
 import { useLoaderData } from "react-router-dom";
+import ForumHeader from "./ForumHeader";
 
 export async function loader({ params }) {
     const response = await fetch(
@@ -37,6 +39,8 @@ export default function Forum() {
             <Navbar showSignInModal={showSignInModal} />
 
             <section className="w-9/12 mx-auto flex-grow flex-col justify-center items-center">
+                <ForumHeader forum={forum} />
+                <HistoryBar forum={forum} />
                 <ThreadList forum={forum} />
             </section>
 
