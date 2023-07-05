@@ -5,7 +5,7 @@ export default function HomepageIntro() {
     return (
         <div className="w-full pt-10 pb-16">
             <div className="w-10/12 mx-auto flex justify-center items-center">
-                <div className="w-6/12 flex flex-col justify-center items-center text-center text-midnight">
+                <div className="w-6/12 min-w-[700px] flex flex-col justify-center items-center text-center text-midnight">
                     <span className="font-light text-6xl leading-tight tracking-tight">
                         Unveiling Literary Horizons,
                     </span>
