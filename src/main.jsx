@@ -3,6 +3,7 @@ import "./assets/index.css";
 import CreateForumForm, {
     action as createForumAction,
 } from "./pages/CreateForum/CreateForumForm";
+import Forum, { loader as forumLoader } from "./pages/Forum/Forum";
 import ForumsPage, {
     loader as forumsLoader,
 } from "./pages/ForumsPage/ForumsPage";
@@ -41,8 +42,9 @@ const router = createBrowserRouter([
     },
     {
         path: "/forums/:forumId",
-        element: <CreateForumForm />,
+        element: <Forum />,
         errorElement: <ErrorPage />,
+        loader: forumLoader,
     },
 ]);
 

@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+
+import Footer from "../../components/Footer";
+import Modal from "../../components/Modal";
+import Navbar from "../../components/Navbar";
+import SignInForm from "../../components/SignInForm";
+import { useLoaderData } from "react-router-dom";
+
+export async function loader({ params }) {
+    const response = await fetch(
+        `http://localhost:3000/forum/${params.forumId}`
+    );
+
+    const forum = await response.json();
+
+    return forum;
+}
+
+export default function Forum() {
+    const forum = useLoaderData();
+
+    const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
+
+    const showSignInModal = () => {
+        setIsSignInModalVisible(true);
+    };
+
+    const hideSignInModal = () => {
+        setIsSignInModalVisible(false);
+    };
+
+    return (
+        <main className="w-full min-h-screen flex flex-col justify-between">
+            <Navbar showSignInModal={showSignInModal} />
+
+            <section className="w-9/12 mx-auto flex-grow flex-col justify-center items-center">
+                {forum.description}
+            </section>
+
+            <Footer />
+
+            <Modal isVisible={isSignInModalVisible} hideModal={hideSignInModal}>
+                <SignInForm />
+            </Modal>
+        </main>
+    );
+}
