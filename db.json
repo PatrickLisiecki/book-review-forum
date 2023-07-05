@@ -1,5 +1,5 @@
 {
-  "forum": [
+  "forums": [
     {
       "name": "Fiction",
       "description": "A forum related to everything fiction, whether it is film or literature",
@@ -8,18 +8,18 @@
     },
     {
       "name": "Movies",
-      "description": "Movies related or based on books",
-      "id": "7138fc84-bdc4-47dd-ba90-1c72de121e5e",
+      "description": "Anything movie related",
+      "id": "d60ba423-3733-4107-9f02-a5591018fd51",
       "thread_count": 0
     },
     {
-      "name": "Favorite Books",
-      "description": "Name your favorite books",
-      "id": "7f2ca375-2a4f-40af-b747-6f9b109d3c80",
+      "name": "Coding Books",
+      "description": "Coding literature",
+      "id": "1c568912-6740-4bb4-a55c-55f7e231e058",
       "thread_count": 0
     }
   ],
-  "thread": [
+  "threads": [
     {
       "thread_topic": "My favorite fiction book is The Giver",
       "id": "111b3c7d-e53c-4766-a65a-8fb8904cd09d",

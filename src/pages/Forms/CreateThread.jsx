@@ -11,7 +11,7 @@ export const action = async ({ request, params }) => {
     // console.log(threadData);
 
     const responseToGet = await fetch(
-        `http://localhost:3000/forum/${params.forumId}`,
+        `http://localhost:3000/forums/${params.forumId}`,
         {
             method: "GET",
             headers: {
@@ -26,7 +26,7 @@ export const action = async ({ request, params }) => {
 
     forum.thread_count += 1;
 
-    const responseToPost = await fetch("http://localhost:3000/thread", {
+    const responseToPost = await fetch("http://localhost:3000/threads", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const action = async ({ request, params }) => {
     });
 
     const responseToPatch = await fetch(
-        `http://localhost:3000/forum/${params.forumId}`,
+        `http://localhost:3000/forums/${params.forumId}`,
         {
             method: "PATCH",
             headers: {

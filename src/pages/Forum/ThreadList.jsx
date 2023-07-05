@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export async function loader({ params }) {
-    let url = "http://localhost:3000/thread";
+    let url = "http://localhost:3000/threads";
 
     const response = await fetch(url);
     const data = await response.json();
@@ -41,7 +41,7 @@ export default function ThreadList({ forum }) {
         let ignore = false;
 
         async function fetchThreads() {
-            const response = await fetch("http://localhost:3000/thread");
+            const response = await fetch("http://localhost:3000/threads");
             const allThreads = await response.json();
 
             console.log(allThreads);

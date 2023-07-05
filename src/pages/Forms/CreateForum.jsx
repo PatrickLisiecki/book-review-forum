@@ -10,7 +10,7 @@ export const action = async ({ request, params }) => {
 
     // console.log(forumData);
 
-    const response = await fetch("http://localhost:3000/forum", {
+    const response = await fetch("http://localhost:3000/forums", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

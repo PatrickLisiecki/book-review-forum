@@ -10,7 +10,7 @@ import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 
 export async function loader({ params }) {
-    let url = "http://localhost:3000/forum";
+    let url = "http://localhost:3000/forums";
 
     const response = await fetch(url);
     const data = await response.json();

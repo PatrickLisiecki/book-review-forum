@@ -2,7 +2,7 @@ import { Form, Link, redirect, useLoaderData } from "react-router-dom";
 
 export async function loader({ params }) {
     const response = await fetch(
-        `http://localhost:3000/forum/${params.forumId}`
+        `http://localhost:3000/forums/${params.forumId}`
     );
 
     const forum = await response.json();
@@ -17,7 +17,7 @@ export async function action({ request, params }) {
     const updates = Object.fromEntries(formData);
 
     const response = await fetch(
-        `http://localhost:3000/forum/${params.forumId}`,
+        `http://localhost:3000/forums/${params.forumId}`,
         {
             method: "PATCH",
             headers: {

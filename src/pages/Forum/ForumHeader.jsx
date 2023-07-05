@@ -1,6 +1,7 @@
-import React from "react";
+import { Form, Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import React from "react";
 
 export default function ForumHeader({ forum }) {
     const { name, description, id } = forum;
@@ -32,12 +33,23 @@ export default function ForumHeader({ forum }) {
                 >
                     <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
                 </Link>
-                <Link
-                    to={`/forums/${id}/destroy`}
-                    className="flex justify-center items-center p-2 rounded-full border-2 border-midnight hover:border-sky-400 focus:outline-none text-midnight hover:text-sky-400"
+                <Form
+                    method="POST"
+                    action={`/forums/${id}/destroy`}
+                    onSubmit={(event) => {
+                        if (
+                            !confirm(
+                                "Please confirm you want to delete this record."
+                            )
+                        ) {
+                            event.preventDefault();
+                        }
+                    }}
                 >
-                    <FontAwesomeIcon icon="fa-solid fa-trash" />
-                </Link>
+                    <button className="flex justify-center items-center p-2 rounded-full border-2 border-midnight hover:border-sky-400 focus:outline-none text-midnight hover:text-sky-400">
+                        <FontAwesomeIcon icon="fa-solid fa-trash" />
+                    </button>
+                </Form>
             </div>
         </div>
     );

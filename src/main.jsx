@@ -6,35 +6,35 @@ import CreateForum, {
 import CreateThread, {
     action as createThreadAction,
 } from "./pages/Forms/CreateThread";
+import DestroyForum, {
+    action as destroyForumAction,
+} from "./pages/Forms/DestroyForum";
+import EditForum, {
+    action as editForumAction,
+    loader as editForumLoader,
+} from "./pages/Forms/EditForum";
 import Forum, { loader as forumLoader } from "./pages/Forum/Forum";
 import ForumsPage, {
     loader as forumsLoader,
 } from "./pages/ForumsPage/ForumsPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
+    faArrowRightToBracket,
     faBook,
     faBookmark,
+    faChevronRight,
     faComments,
     faLink,
-    faXmark,
-    faArrowRightToBracket,
-    faChevronRight,
     faPenToSquare,
     faTrash,
+    faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { action as destroyForumAction } from "./pages/Forms/DestroyForum";
-
-import EditForum, {
-    loader as editForumLoader,
-    action as editForumAction,
-} from "./pages/Forms/EditForum";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ErrorPage from "./components/ErrorPage.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 // import App from "./App.jsx";
@@ -87,14 +87,16 @@ const router = createBrowserRouter([
         action: createThreadAction,
     },
     {
-        path: "forums/:forumId/edit",
+        path: "/forums/:forumId/edit",
         element: <EditForum />,
         errorElement: <ErrorPage />,
         loader: editForumLoader,
         action: editForumAction,
     },
     {
-        path: "forums/:forumId/destroy",
+        path: "/forums/:forumId/destroy",
+        element: <DestroyForum />,
+        errorElement: <ErrorPage />,
         action: destroyForumAction,
     },
 ]);

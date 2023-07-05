@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 import Footer from "../../components/Footer";
+import ForumHeader from "./ForumHeader";
 import HistoryBar from "./HistoryBar";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import SignInForm from "../../components/SignInForm";
 import ThreadList from "./ThreadList";
 import { useLoaderData } from "react-router-dom";
-import ForumHeader from "./ForumHeader";
 
 export async function loader({ params }) {
     const response = await fetch(
-        `http://localhost:3000/forum/${params.forumId}`
+        `http://localhost:3000/forums/${params.forumId}`
     );
 
     const forum = await response.json();
