@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import SignInForm from "../../components/SignInForm";
+import ThreadList from "./ThreadList";
 import { useLoaderData } from "react-router-dom";
 
 export async function loader({ params }) {
@@ -12,6 +13,8 @@ export async function loader({ params }) {
     );
 
     const forum = await response.json();
+
+    console.log(forum);
 
     return forum;
 }
@@ -34,7 +37,7 @@ export default function Forum() {
             <Navbar showSignInModal={showSignInModal} />
 
             <section className="w-9/12 mx-auto flex-grow flex-col justify-center items-center">
-                {forum.description}
+                <ThreadList forum={forum} />
             </section>
 
             <Footer />

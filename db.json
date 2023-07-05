@@ -1,51 +1,55 @@
 {
-  "forum": [
-    {
-      "id": "1",
-      "name": "Fiction",
-      "description": "A forum for discussing fiction books.",
-      "thread_count": 1
-    },
-    {
-      "name": "Non-Fiction",
-      "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
-      "id": 29,
-      "thread_count": 0
-    },
-    {
-      "name": "",
-      "description": "",
-      "id": 44,
-      "thread_count": 0
-    },
-    {
-      "name": "Favorite Books",
-      "description": "Post about your favorite books!",
-      "id": 70,
-      "thread_count": 0
-    },
-    {
-      "name": "Harry Potter",
-      "description": "My favorite Harry Potter book is The Sorcerer's Stone, what is yours?",
-      "id": 5,
-      "thread_count": 0
-    }
-  ],
-  "thread": [
-    {
-      "thread_id": 1,
-      "thread_title": "1984",
-      "thread_content": "How do you guys feel about this book?",
-      "forum_id": 1
-    }
-  ],
-  "posts": [
-    {
-      "post_id": 1,
-      "post_title": "My Opinions",
-      "post_content": "Opinions about 1984 by George Orwell may vary, but it often elicits a sense of profound unease and foreboding. Many readers find themselves captivated by the dystopian world portrayed in the novel, experiencing a mix of fascination, discomfort, and reflection on the themes of surveillance, totalitarianism, and the erosion of personal freedom. Some may even describe their emotional response to 1984 as a blend of intrigue, alarm, and a haunting sense of relevance in today's society.",
-      "post_date": "Today",
-      "thread_id": 1
-    }
-  ]
+    "forum": [
+        {
+            "id": "1",
+            "name": "Fiction",
+            "description": "A forum for discussing fiction books.",
+            "thread_count": 1
+        },
+        {
+            "name": "Non-Fiction",
+            "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
+            "id": 29,
+            "thread_count": 0
+        },
+        {
+            "name": "",
+            "description": "",
+            "id": 44,
+            "thread_count": 0
+        },
+        {
+            "name": "Favorite Books",
+            "description": "Post about your favorite books!",
+            "id": 70,
+            "thread_count": 0
+        },
+        {
+            "name": "Harry Potter",
+            "description": "My favorite Harry Potter book is The Sorcerer's Stone, what is yours?",
+            "id": 5,
+            "thread_count": 0
+        }
+    ],
+    "thread": [
+        {
+            "id": 1,
+            "thread_topic": "1984",
+            "forum_id": 1
+        },
+        {
+            "id": 2,
+            "thread_topic": "Pepe",
+            "forum_id": 29
+        }
+    ],
+    "posts": [
+        {
+            "post_id": 1,
+            "post_title": "My Opinions",
+            "post_content": "Opinions about 1984 by George Orwell may vary, but it often elicits a sense of profound unease and foreboding. Many readers find themselves captivated by the dystopian world portrayed in the novel, experiencing a mix of fascination, discomfort, and reflection on the themes of surveillance, totalitarianism, and the erosion of personal freedom. Some may even describe their emotional response to 1984 as a blend of intrigue, alarm, and a haunting sense of relevance in today's society.",
+            "post_date": "Today",
+            "thread_id": 1
+        }
+    ]
 }
