@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Forum({ forum }) {
-    const { name, description, thread_count } = forum;
+    const { id, name, description, thread_count } = forum;
 
     return (
         <li className="w-11/12 mx-auto border-t border-b border-gray-400 bg-none first:border-t-0 last:border-b-0">
@@ -14,7 +14,7 @@ function Forum({ forum }) {
                     />
                 </div>
                 <div className="w-full p-3 ml-3 text-gray-900 flex-col content-start rounded-2xl bg-gray-200">
-                    <Link to="/forums/:forumId" className="hover:underline">
+                    <Link to={`/forums/${id}`} className="hover:underline">
                         <span className="block text-xl font-semibold">
                             {name}
                         </span>
