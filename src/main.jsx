@@ -3,7 +3,9 @@ import "./assets/index.css";
 import CreateForumForm, {
     action as createForumAction,
 } from "./pages/CreateForum/CreateForumForm";
-import Forums, { loader as forumsLoader } from "./pages/Forums/Forums";
+import ForumsPage, {
+    loader as forumsLoader,
+} from "./pages/ForumsPage/ForumsPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import AboutPage from "./pages/AboutPage/AboutPage";
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/forums",
-        element: <Forums />,
+        element: <ForumsPage />,
         errorElement: <ErrorPage />,
         loader: forumsLoader,
     },

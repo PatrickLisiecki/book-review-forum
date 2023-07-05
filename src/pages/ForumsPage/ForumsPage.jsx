@@ -1,7 +1,5 @@
 import "../../assets/App.css";
 
-import { useEffect, useState } from "react";
-
 import Footer from "../../components/Footer";
 import ForumList from "./ForumList";
 import Modal from "./Modal";
@@ -9,6 +7,7 @@ import Navbar from "../../components/Navbar";
 import SignInForm from "./SignInForm";
 import TopBar from "./TopBar";
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
 
 export async function loader({ params }) {
     let url = "http://localhost:3000/forum";
@@ -18,7 +17,7 @@ export async function loader({ params }) {
     return data;
 }
 
-export default function Forums() {
+export default function ForumsPage() {
     const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
 
     const forums = useLoaderData();

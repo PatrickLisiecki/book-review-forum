@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Forum({ forum }) {
+function ForumLink({ forum }) {
     const { id, name, description, thread_count } = forum;
 
     return (
@@ -32,7 +32,7 @@ function Forum({ forum }) {
 export default function ForumList({ forums }) {
     const allForums = forums.map((currentForum) => {
         console.log(currentForum.forum_id);
-        return <Forum forum={currentForum} key={currentForum.id} />;
+        return <ForumLink forum={currentForum} key={currentForum.id} />;
     });
 
     return (
