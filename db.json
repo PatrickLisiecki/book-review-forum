@@ -1,49 +1,35 @@
 {
   "forum": [
     {
-      "id": "1",
-      "name": "Everything Fiction",
-      "description": "Fiction related",
+      "name": "Fiction",
+      "description": "A forum related to everything fiction, whether it is film or literature",
+      "id": "4d511fff-ff1b-46ec-9d0d-57fa1c9a9c57",
       "thread_count": 2
     },
     {
-      "name": "Non-Fiction",
-      "description": "A forum for book enjoyers to discuss their favorite non-fiction books.",
-      "id": 29,
+      "name": "Movies",
+      "description": "Movies related or based on books",
+      "id": "7138fc84-bdc4-47dd-ba90-1c72de121e5e",
       "thread_count": 0
     },
     {
       "name": "Favorite Books",
-      "description": "Post about your favorite books!",
-      "id": 70,
-      "thread_count": 0
-    },
-    {
-      "name": "Harry Potter",
-      "description": "My favorite Harry Potter book is The Sorcerer's Stone, what is yours?",
-      "id": 5,
+      "description": "Name your favorite books",
+      "id": "7f2ca375-2a4f-40af-b747-6f9b109d3c80",
       "thread_count": 0
     }
   ],
   "thread": [
     {
-      "thread_topic": "I love Harry Potter!",
-      "id": 47,
-      "forum_id": "1"
+      "thread_topic": "My favorite fiction book is The Giver",
+      "id": "111b3c7d-e53c-4766-a65a-8fb8904cd09d",
+      "forum_id": "4d511fff-ff1b-46ec-9d0d-57fa1c9a9c57"
     },
     {
-      "thread_topic": "I love books",
-      "id": 7,
-      "forum_id": "1"
+      "thread_topic": "I love Diary of A Wimpy Kid",
+      "id": "4f419f43-f0fc-4bdd-9eb6-13332dd1154b",
+      "forum_id": "4d511fff-ff1b-46ec-9d0d-57fa1c9a9c57"
     }
   ],
-  "posts": [
-    {
-      "post_id": 1,
-      "post_title": "My Opinions",
-      "post_content": "Opinions about 1984 by George Orwell may vary, but it often elicits a sense of profound unease and foreboding. Many readers find themselves captivated by the dystopian world portrayed in the novel, experiencing a mix of fascination, discomfort, and reflection on the themes of surveillance, totalitarianism, and the erosion of personal freedom. Some may even describe their emotional response to 1984 as a blend of intrigue, alarm, and a haunting sense of relevance in today's society.",
-      "post_date": "Today",
-      "thread_id": 1
-    }
-  ]
+  "posts": []
 }

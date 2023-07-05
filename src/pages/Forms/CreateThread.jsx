@@ -1,9 +1,11 @@
 import { Form, Link, redirect } from "react-router-dom";
 
+import { v4 as uuidv4 } from "uuid";
+
 export const action = async ({ request, params }) => {
     let threadData = Object.fromEntries(await request.formData());
 
-    threadData.id = Math.floor(Math.random() * 100) + 1;
+    threadData.id = uuidv4();
     threadData.forum_id = params.forumId;
 
     // console.log(threadData);

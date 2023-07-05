@@ -1,12 +1,14 @@
 import { Form, Link, redirect } from "react-router-dom";
 
+import { v4 as uuidv4 } from "uuid";
+
 export const action = async ({ request, params }) => {
     let forumData = Object.fromEntries(await request.formData());
 
-    forumData.id = Math.floor(Math.random() * 100) + 1;
+    forumData.id = uuidv4();
     forumData.thread_count = 0;
 
-    console.log(forumData);
+    // console.log(forumData);
 
     const response = await fetch("http://localhost:3000/forum", {
         method: "POST",
