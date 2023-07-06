@@ -9,9 +9,9 @@ export async function action({ params }) {
         }
     );
 
-    // if (!response.ok) {
-    //     throw response;
-    // }
+    if (!response.ok) {
+        throw response;
+    }
 
     return redirect("/forums");
 }
