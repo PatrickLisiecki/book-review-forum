@@ -2,6 +2,7 @@ import Footer from "../../components/Footer";
 import HomepageEntry from "./HomepageEntry";
 import HomepageMidsection from "./HomepageMidsection";
 import HomepageNavbar from "./HomepageNavbar";
+import { Outlet } from "react-router-dom";
 import React from "react";
 
 export default function Homepage() {
@@ -10,6 +11,7 @@ export default function Homepage() {
             <HomepageNavbar />
             <HomepageEntry />
             <HomepageMidsection />
+            <Outlet />
             <Footer />
         </section>
     );

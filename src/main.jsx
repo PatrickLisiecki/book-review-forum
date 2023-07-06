@@ -31,6 +31,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import AboutPage from "./pages/AboutPage/AboutPage";
+import Contact from "./pages/Homepage/Contact";
 import ErrorPage from "./components/ErrorPage.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import React from "react";
@@ -56,6 +57,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Homepage />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/contact",
+                element: <Contact />,
+            },
+        ],
     },
     {
         path: "/about",
