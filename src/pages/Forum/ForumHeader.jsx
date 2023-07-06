@@ -29,7 +29,7 @@ export default function ForumHeader({ forum }) {
             <div className="flex flex-row justify-center items-center gap-4 mr-4">
                 <Link
                     to={`/forums/${id}/edit`}
-                    className="flex justify-center items-center p-2 rounded-full border-2 border-midnight hover:border-sky-400 text-midnight hover:text-sky-400 focus:outline-none"
+                    className="flex justify-center items-center p-2 text-midnight rounded-full border-2 border-midnight hover:border-green-500 hover:text-green-500 focus:outline-none"
                 >
                     <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
                 </Link>
@@ -39,14 +39,14 @@ export default function ForumHeader({ forum }) {
                     onSubmit={(event) => {
                         if (
                             !confirm(
-                                "Please confirm you want to delete this record."
+                                "This will delete the forum and any related threads."
                             )
                         ) {
                             event.preventDefault();
                         }
                     }}
                 >
-                    <button className="flex justify-center items-center p-2 rounded-full border-2 border-midnight hover:border-sky-400 focus:outline-none text-midnight hover:text-sky-400">
+                    <button className="flex justify-center items-center p-2 text-midnight rounded-full border-2 border-midnight hover:border-red-500 hover:text-red-500 focus:outline-none">
                         <FontAwesomeIcon icon="fa-solid fa-trash" />
                     </button>
                 </Form>

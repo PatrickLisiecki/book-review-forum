@@ -12,7 +12,7 @@ export async function loader({ params }) {
 }
 
 function ThreadLink({ thread }) {
-    const { id, thread_topic } = thread;
+    const { thread_topic } = thread;
 
     return (
         <li className="w-11/12 mx-auto border-t border-b border-gray-400 bg-none first:border-t-0 last:border-b-0">
@@ -26,7 +26,6 @@ function ThreadLink({ thread }) {
                     </Link>
                 </div>
                 <div className="w-full p-3 ml-3 text-midnight flex-col content-start rounded-2xl bg-gray-200">
-                    {/* <span className="block text-xl font-semibold">{id}</span> */}
                     <p className="block p-3 text-lg">{thread_topic}</p>
                 </div>
             </div>
