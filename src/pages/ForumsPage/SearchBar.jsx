@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function SearchBar({ data }) {
     // State for search bar
@@ -9,20 +10,43 @@ export default function SearchBar({ data }) {
     // State for search query results
     const [searchResults, setSearchResults] = useState([]);
 
+    const [searchFilter, setSearchFilter] = useState("name");
+
     const getSearchResults = () => {
+        let results = [];
         // Filter if search query includes
-        const results = data.filter((forum) =>
-            forum.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        switch (searchFilter) {
+            case "name":
+                results = data.filter((forum) =>
+                    forum.name.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+                break;
+            case "description":
+                results = data.filter((forum) =>
+                    forum.description
+                        .toLowerCase()
+                        .includes(searchQuery.toLowerCase())
+                );
+                break;
+            case "thread_count":
+                results = data.filter(
+                    (forum) => forum.thread_count === parseInt(searchQuery)
+                );
+                break;
+            default:
+                console.log("Invalid filter.");
+        }
 
         setSearchResults(results);
     };
 
+    useEffect(() => {
+        getSearchResults();
+    }, [searchQuery]);
+
     // Function for handling the search query state
     const handleSearchQuery = (e) => {
         setSearchQuery(e.target.value);
-
-        getSearchResults();
     };
 
     return (
@@ -68,10 +92,16 @@ export default function SearchBar({ data }) {
                                 name="filter"
                                 id="filter"
                                 className="text-s outline-none focus:outline-none bg-transparent"
+                                value={searchFilter}
+                                onChange={(e) =>
+                                    setSearchFilter(e.target.value)
+                                }
                             >
-                                <option value="all">All</option>
                                 <option value="name">Name</option>
-                                <option value="genre">Genre</option>
+                                <option value="description">Description</option>
+                                <option value="thread_count">
+                                    # of Threads
+                                </option>
                             </select>
                         </div>
                     </div>
